@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Tap1ViewController" customModule="save" customModuleProvider="target">
+            <connections>
+                <outlet property="childView" destination="44S-qO-ebi" id="RDF-k9-eo4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Y1i-os-Tw8">
+                    <rect key="frame" x="114.66666666666669" y="50" width="161" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="9te-sQ-9rD"/>
+                        <constraint firstAttribute="width" constant="161" id="iYR-SP-ZzQ"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqK-U9-bL8">
+                    <rect key="frame" x="6" y="43.666666666666657" width="52" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="0GZ-ms-aOQ"/>
+                        <constraint firstAttribute="width" constant="52" id="n0p-4h-IeP"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="scan" title=" " subtitle=" "/>
+                    <connections>
+                        <action selector="scan" destination="-1" eventType="touchUpInside" id="KTS-6W-LNH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emJ-yY-M9V">
+                    <rect key="frame" x="332" y="43.666666666666657" width="52" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="FPf-ls-cf0"/>
+                        <constraint firstAttribute="width" constant="52" id="GaA-oi-odx"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="search" title=" "/>
+                    <connections>
+                        <action selector="search" destination="-1" eventType="touchUpInside" id="Cws-Du-Ulo"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44S-qO-ebi">
+                    <rect key="frame" x="0.0" y="89" width="390" height="755"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Y1i-os-Tw8" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="9hH-VI-vUc"/>
+                <constraint firstItem="44S-qO-ebi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ghd-Cf-CU4"/>
+                <constraint firstItem="QqK-U9-bL8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="6" id="L3W-VO-bZl"/>
+                <constraint firstItem="44S-qO-ebi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NuC-Vx-zTM"/>
+                <constraint firstItem="QqK-U9-bL8" firstAttribute="centerY" secondItem="Y1i-os-Tw8" secondAttribute="centerY" id="O5v-9Z-aPd"/>
+                <constraint firstItem="44S-qO-ebi" firstAttribute="top" secondItem="Y1i-os-Tw8" secondAttribute="bottom" constant="10" id="OKB-KB-hu5"/>
+                <constraint firstItem="emJ-yY-M9V" firstAttribute="centerY" secondItem="Y1i-os-Tw8" secondAttribute="centerY" id="OSZ-nt-c3i"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="emJ-yY-M9V" secondAttribute="trailing" constant="6" id="kll-26-Hxy"/>
+                <constraint firstAttribute="bottom" secondItem="44S-qO-ebi" secondAttribute="bottom" id="wax-hZ-7Oc"/>
+                <constraint firstItem="Y1i-os-Tw8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="6" id="zLY-8l-9JR"/>
+            </constraints>
+            <point key="canvasLocation" x="130.76923076923077" y="63.270142180094787"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="82" height="25"/>
+        <image name="scan" width="23" height="23"/>
+        <image name="search" width="23" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKtc-Regular.otf">
+            <string>NotoSansCJKtc-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseCardViewController" customModule="save" customModuleProvider="target">
+            <connections>
+                <outlet property="myTableView" destination="Bjj-kl-7Ni" id="vOl-Tj-Pwu"/>
+                <outlet property="view" destination="FMK-PV-Qd2" id="RdA-51-HZj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="FMK-PV-Qd2">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-kB-7R2">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="92.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="會員卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdS-hZ-M0e">
+                    <rect key="frame" x="178.5" y="52" width="57" height="28.5"/>
+                    <fontDescription key="fontDescription" name="NotoSansCJKtc-Regular" family="Noto Sans CJK TC" pointSize="19"/>
+                    <color key="textColor" red="0.064267762010000007" green="0.25503495339999999" blue="0.32887196540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRm-KA-hX8">
+                    <rect key="frame" x="0.0" y="92.5" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="XnO-V8-D35"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUQ-Rv-1Za">
+                    <rect key="frame" x="20" y="45.5" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="unS-DK-XWP"/>
+                        <constraint firstAttribute="width" constant="42" id="yIL-hH-sZ1"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="backBtn" title=" "/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="w5h-Gi-S3I"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bjj-kl-7Ni">
+                    <rect key="frame" x="10" y="98.5" width="394" height="647.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="el7-Cx-chu"/>
+                        <outlet property="delegate" destination="-1" id="L3l-jq-rPb"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ff-tz-jo9">
+                    <rect key="frame" x="70.5" y="780" width="273" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="LSy-wU-kjT"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" ">
+                        <backgroundConfiguration key="background" image="cardpic2"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="newMem:" destination="-1" eventType="touchUpInside" id="O7B-W6-bZz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7dI-sF-JGv"/>
+            <color key="backgroundColor" red="0.94893044230000001" green="0.94906669860000004" blue="0.94890063999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QRm-KA-hX8" firstAttribute="top" secondItem="hdc-kB-7R2" secondAttribute="bottom" id="2kt-2v-sXq"/>
+                <constraint firstItem="hdc-kB-7R2" firstAttribute="leading" secondItem="7dI-sF-JGv" secondAttribute="leading" id="3xA-D1-Jod"/>
+                <constraint firstItem="QdS-hZ-M0e" firstAttribute="top" secondItem="7dI-sF-JGv" secondAttribute="top" constant="8" id="6Yi-wq-3ID"/>
+                <constraint firstItem="JUQ-Rv-1Za" firstAttribute="centerY" secondItem="QdS-hZ-M0e" secondAttribute="centerY" id="7kw-SM-mar"/>
+                <constraint firstAttribute="bottom" secondItem="Bjj-kl-7Ni" secondAttribute="bottom" constant="150" id="Ayx-06-PXa"/>
+                <constraint firstItem="Bjj-kl-7Ni" firstAttribute="trailing" secondItem="7dI-sF-JGv" secondAttribute="trailing" constant="-10" id="BxP-Es-mPu"/>
+                <constraint firstItem="JUQ-Rv-1Za" firstAttribute="leading" secondItem="7dI-sF-JGv" secondAttribute="leading" constant="20" id="C9v-kJ-M8C"/>
+                <constraint firstItem="0ff-tz-jo9" firstAttribute="centerX" secondItem="Bjj-kl-7Ni" secondAttribute="centerX" id="TCb-jM-r7l"/>
+                <constraint firstItem="hdc-kB-7R2" firstAttribute="trailing" secondItem="7dI-sF-JGv" secondAttribute="trailing" id="UFW-eB-q6n"/>
+                <constraint firstItem="QRm-KA-hX8" firstAttribute="top" secondItem="QdS-hZ-M0e" secondAttribute="bottom" constant="12" id="UME-uk-Dna"/>
+                <constraint firstItem="7dI-sF-JGv" firstAttribute="bottom" secondItem="0ff-tz-jo9" secondAttribute="bottom" constant="30" id="d6B-h8-f4N"/>
+                <constraint firstItem="QRm-KA-hX8" firstAttribute="leading" secondItem="FMK-PV-Qd2" secondAttribute="leading" id="da5-gv-yYL"/>
+                <constraint firstItem="QdS-hZ-M0e" firstAttribute="centerX" secondItem="7dI-sF-JGv" secondAttribute="centerX" id="gGv-6W-QVc"/>
+                <constraint firstItem="Bjj-kl-7Ni" firstAttribute="top" secondItem="QRm-KA-hX8" secondAttribute="top" constant="6" id="kpb-kT-Izy"/>
+                <constraint firstAttribute="trailing" secondItem="QRm-KA-hX8" secondAttribute="trailing" id="mAT-Sd-o6I"/>
+                <constraint firstItem="Bjj-kl-7Ni" firstAttribute="leading" secondItem="7dI-sF-JGv" secondAttribute="leading" constant="10" id="mRa-X2-raj"/>
+                <constraint firstItem="0ff-tz-jo9" firstAttribute="width" secondItem="FMK-PV-Qd2" secondAttribute="width" multiplier="0.65942" id="whP-nc-Sdh"/>
+                <constraint firstItem="hdc-kB-7R2" firstAttribute="top" secondItem="FMK-PV-Qd2" secondAttribute="top" id="xXp-3e-UYt"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="63.616071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backBtn" width="14" height="21"/>
+        <image name="cardpic2" width="260" height="49"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.8.2)
+  - DTPagerController (2.0.4)
+  - iOSDropDown (0.3.4)
+  - Kingfisher (7.1.1)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
+  - DTPagerController (~> 2.0.4)
+  - iOSDropDown
+  - Kingfisher
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DTPagerController
+    - iOSDropDown
+    - Kingfisher
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  DTPagerController: 160f3639a40488c9b31a43fa34ee1486337b3582
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
+  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 293519fd1583f9ab621183679cb435fe51c4ee05
+
+COCOAPODS: 1.8.4

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKtc-Regular.otf">
+            <string>NotoSansCJKtc-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinishTaskViewController" customModule="save" customModuleProvider="target">
+            <connections>
+                <outlet property="myTableView" destination="K5s-Ii-J8A" id="XNE-ZY-UP1"/>
+                <outlet property="view" destination="Edt-Ea-beo" id="KZe-2z-Ibj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Edt-Ea-beo">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="任務記錄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWT-nx-wkJ">
+                    <rect key="frame" x="171" y="56" width="72" height="27"/>
+                    <fontDescription key="fontDescription" name="NotoSansCJKtc-Regular" family="Noto Sans CJK TC" pointSize="18"/>
+                    <color key="textColor" red="0.064267762010000007" green="0.25503495339999999" blue="0.32887196540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfE-wh-s56">
+                    <rect key="frame" x="0.0" y="97" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="f3k-5Z-fuy"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAY-kn-ruf">
+                    <rect key="frame" x="20" y="48.5" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="HvL-9L-q3l"/>
+                        <constraint firstAttribute="width" constant="42" id="IX9-dS-aOv"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="backBtn" title=" "/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="1TO-5y-O8v"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K5s-Ii-J8A">
+                    <rect key="frame" x="10" y="98" width="394" height="798"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="M2u-FT-J8w"/>
+                        <outlet property="delegate" destination="-1" id="F7z-ak-dHW"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="iKB-M1-lHS"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="K5s-Ii-J8A" firstAttribute="trailing" secondItem="iKB-M1-lHS" secondAttribute="trailing" constant="-10" id="15k-fW-stZ"/>
+                <constraint firstAttribute="bottom" secondItem="K5s-Ii-J8A" secondAttribute="bottom" id="1jS-WV-twb"/>
+                <constraint firstItem="BAY-kn-ruf" firstAttribute="centerY" secondItem="sWT-nx-wkJ" secondAttribute="centerY" id="45z-fw-ZyY"/>
+                <constraint firstItem="sWT-nx-wkJ" firstAttribute="centerX" secondItem="iKB-M1-lHS" secondAttribute="centerX" id="70N-sP-UUw"/>
+                <constraint firstItem="bfE-wh-s56" firstAttribute="top" secondItem="sWT-nx-wkJ" secondAttribute="bottom" constant="14" id="7lY-nc-SbY"/>
+                <constraint firstItem="bfE-wh-s56" firstAttribute="leading" secondItem="Edt-Ea-beo" secondAttribute="leading" id="DLG-YH-B4G"/>
+                <constraint firstItem="K5s-Ii-J8A" firstAttribute="leading" secondItem="iKB-M1-lHS" secondAttribute="leading" constant="10" id="ZFm-Wc-fU2"/>
+                <constraint firstAttribute="trailing" secondItem="bfE-wh-s56" secondAttribute="trailing" id="iAV-XP-Gbt"/>
+                <constraint firstItem="K5s-Ii-J8A" firstAttribute="top" secondItem="bfE-wh-s56" secondAttribute="bottom" id="qVI-fe-cyW"/>
+                <constraint firstItem="BAY-kn-ruf" firstAttribute="leading" secondItem="iKB-M1-lHS" secondAttribute="leading" constant="20" id="wP8-qp-3qD"/>
+                <constraint firstItem="sWT-nx-wkJ" firstAttribute="top" secondItem="iKB-M1-lHS" secondAttribute="top" constant="12" id="xtP-Dz-UTA"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="63.616071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backBtn" width="14" height="21"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

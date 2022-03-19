@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKtc-Regular.otf">
+            <string>NotoSansCJKtc-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvoiceViewController" customModule="save" customModuleProvider="target">
+            <connections>
+                <outlet property="childView" destination="9by-nY-fwW" id="g6m-6E-YLJ"/>
+                <outlet property="view" destination="UCT-n8-c1i" id="Sy7-da-cfg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="UCT-n8-c1i">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="條碼掃描" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frD-Ck-Fgc">
+                    <rect key="frame" x="169" y="52" width="76" height="28.5"/>
+                    <fontDescription key="fontDescription" name="NotoSansCJKtc-Regular" family="Noto Sans CJK TC" pointSize="19"/>
+                    <color key="textColor" red="0.064267762010000007" green="0.25503495339999999" blue="0.32887196540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afY-V7-xAZ">
+                    <rect key="frame" x="20" y="45.5" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="3ib-Cs-m2x"/>
+                        <constraint firstAttribute="height" constant="42" id="wwo-CC-wmJ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="backBtn" title=" "/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="GNj-3u-lUb"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9by-nY-fwW">
+                    <rect key="frame" x="0.0" y="86.5" width="414" height="809.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="blZ-Fe-Csf"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="frD-Ck-Fgc" firstAttribute="centerX" secondItem="blZ-Fe-Csf" secondAttribute="centerX" id="IN0-Wb-WUx"/>
+                <constraint firstItem="9by-nY-fwW" firstAttribute="trailing" secondItem="blZ-Fe-Csf" secondAttribute="trailing" id="KNl-Ie-5Va"/>
+                <constraint firstItem="frD-Ck-Fgc" firstAttribute="top" secondItem="blZ-Fe-Csf" secondAttribute="top" constant="8" id="PEF-iY-E61"/>
+                <constraint firstItem="9by-nY-fwW" firstAttribute="top" secondItem="frD-Ck-Fgc" secondAttribute="bottom" constant="6" id="Pd5-oS-oOU"/>
+                <constraint firstItem="afY-V7-xAZ" firstAttribute="centerY" secondItem="frD-Ck-Fgc" secondAttribute="centerY" id="aCD-Lc-Yqf"/>
+                <constraint firstItem="afY-V7-xAZ" firstAttribute="leading" secondItem="blZ-Fe-Csf" secondAttribute="leading" constant="20" id="eAu-RF-cMr"/>
+                <constraint firstAttribute="bottom" secondItem="9by-nY-fwW" secondAttribute="bottom" id="sY3-1I-5aB"/>
+                <constraint firstItem="9by-nY-fwW" firstAttribute="leading" secondItem="blZ-Fe-Csf" secondAttribute="leading" id="tXi-4M-x2J"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="63.616071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backBtn" width="14" height="21"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

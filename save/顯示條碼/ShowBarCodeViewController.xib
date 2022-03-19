@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKtc-Regular.otf">
+            <string>NotoSansCJKtc-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowBarCodeViewController" customModule="save" customModuleProvider="target">
+            <connections>
+                <outlet property="lab" destination="xkc-Mk-Pp3" id="GWX-Ti-nQH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barcode" translatesAutoresizingMaskIntoConstraints="NO" id="63h-gu-USU">
+                    <rect key="frame" x="172" y="70" width="552" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="woJ-gH-MWs"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdS-zu-hbc">
+                    <rect key="frame" x="729" y="120" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="Ehy-7L-dGA"/>
+                        <constraint firstAttribute="width" constant="80" id="djp-ao-lWZ"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="arrowRight"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/EJKK44Q" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkc-Mk-Pp3">
+                    <rect key="frame" x="172" y="260" width="552" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="OSA-7X-6ud"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NotoSansCJKtc-Regular" family="Noto Sans CJK TC" pointSize="23"/>
+                    <color key="textColor" red="0.027450980392156862" green="0.2627450980392157" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="liQ-WR-Ijr">
+                    <rect key="frame" x="172" y="298.5" width="552" height="40"/>
+                    <subviews>
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TP-ep-Ad9">
+                            <rect key="frame" x="0.0" y="0.0" width="251" height="40"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" backgroundImage="codeBtn12"/>
+                            <connections>
+                                <action selector="showMyCode:" destination="-1" eventType="touchUpInside" id="9uA-Nx-7Ng"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sQ-em-03L">
+                            <rect key="frame" x="301" y="0.0" width="251" height="40"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" backgroundImage="codeBtn21"/>
+                            <connections>
+                                <action selector="Donnet:" destination="-1" eventType="touchUpInside" id="Td5-Gc-2gv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="rfg-Co-kZa"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemYellowColor"/>
+            <constraints>
+                <constraint firstItem="63h-gu-USU" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.616071" id="0iy-eR-gDN"/>
+                <constraint firstItem="xkc-Mk-Pp3" firstAttribute="top" secondItem="63h-gu-USU" secondAttribute="bottom" constant="10" id="DOG-0M-taz"/>
+                <constraint firstItem="xkc-Mk-Pp3" firstAttribute="leading" secondItem="63h-gu-USU" secondAttribute="leading" id="Djp-Es-0VY"/>
+                <constraint firstItem="63h-gu-USU" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Hfh-Hn-vau"/>
+                <constraint firstItem="liQ-WR-Ijr" firstAttribute="top" secondItem="xkc-Mk-Pp3" secondAttribute="bottom" constant="18" id="Nu5-zW-6HS"/>
+                <constraint firstItem="cdS-zu-hbc" firstAttribute="centerY" secondItem="63h-gu-USU" secondAttribute="centerY" id="RdP-zL-gy8"/>
+                <constraint firstItem="xkc-Mk-Pp3" firstAttribute="trailing" secondItem="63h-gu-USU" secondAttribute="trailing" id="ZY5-gq-Pqj"/>
+                <constraint firstItem="liQ-WR-Ijr" firstAttribute="leading" secondItem="xkc-Mk-Pp3" secondAttribute="leading" id="ilD-ia-tq9"/>
+                <constraint firstItem="liQ-WR-Ijr" firstAttribute="trailing" secondItem="63h-gu-USU" secondAttribute="trailing" id="n0z-IR-mvU"/>
+                <constraint firstItem="63h-gu-USU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="oXc-EH-4ec"/>
+                <constraint firstItem="cdS-zu-hbc" firstAttribute="leading" secondItem="63h-gu-USU" secondAttribute="trailing" constant="5" id="x8z-GH-IcJ"/>
+            </constraints>
+            <point key="canvasLocation" x="131.91964285714286" y="50.724637681159422"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowRight" width="60" height="60"/>
+        <image name="barcode" width="162" height="50.5"/>
+        <image name="codeBtn12" width="218" height="32"/>
+        <image name="codeBtn21" width="218" height="32"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
