@@ -45,7 +45,6 @@ class Tap2ViewController: BaseViewController, RMPScrollingMenuBarControllerDeleg
     
     func menuBarController(_ menuBarController: RMPScrollingMenuBarController!, menuBarItemAt index: Int) -> RMPScrollingMenuBarItem! {
         let item = RMPScrollingMenuBarItem()
-        
         if index == 0 {
             item.title = "商品分類"
         }
@@ -57,9 +56,8 @@ class Tap2ViewController: BaseViewController, RMPScrollingMenuBarControllerDeleg
         btn?.setTitleColor(Constants.getDefaultTextColor(), for: .normal)
         btn?.setTitleColor(Constants.getDefaultTextColor(), for: .disabled)
         btn?.setTitleColor(Constants.getYellowColor(), for: .selected)
-        
         if (index == 0) {
-            btn?.titleEdgeInsets = UIEdgeInsets(top: 0, left: -40, bottom: 0, right: 0);
+            btn?.titleEdgeInsets = UIEdgeInsets(top: 0, left: -item.width+6.0, bottom: 0, right: 0);
         }
         else {
             btn?.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -40);

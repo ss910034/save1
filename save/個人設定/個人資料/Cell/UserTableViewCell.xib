@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,51 +16,53 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="UserTableViewCell" customModule="save" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="382" height="110"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="382" height="110"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u1" translatesAutoresizingMaskIntoConstraints="NO" id="kS8-Dw-zvn">
-                        <rect key="frame" x="40" y="17" width="83" height="76"/>
+                        <rect key="frame" x="38" y="13" width="62" height="62"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="83" id="48f-Sh-l3P"/>
-                            <constraint firstAttribute="height" constant="76" id="SgW-WQ-ltN"/>
+                            <constraint firstAttribute="width" constant="62" id="48f-Sh-l3P"/>
+                            <constraint firstAttribute="height" constant="62" id="SgW-WQ-ltN"/>
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u2" translatesAutoresizingMaskIntoConstraints="NO" id="beK-r5-9fU">
-                        <rect key="frame" x="338" y="43" width="24" height="24"/>
+                        <rect key="frame" x="372.5" y="33.5" width="14" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="ASj-vt-1aD"/>
-                            <constraint firstAttribute="width" constant="24" id="h84-77-FV9"/>
+                            <constraint firstAttribute="height" constant="21" id="ASj-vt-1aD"/>
+                            <constraint firstAttribute="width" constant="14" id="h84-77-FV9"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用者" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTN-Hp-MkO">
-                        <rect key="frame" x="133" y="32" width="57" height="23"/>
+                        <rect key="frame" x="113" y="21" width="48" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="23" id="bIN-Cy-L3D"/>
+                            <constraint firstAttribute="height" constant="24" id="bIN-Cy-L3D"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="NotoSansCJKtc-Medium" family="Noto Sans CJK TC" pointSize="19"/>
+                        <fontDescription key="fontDescription" name="NotoSansCJKtc-Medium" family="Noto Sans CJK TC" pointSize="16"/>
                         <color key="textColor" red="0.062745098040000002" green="0.25503495339999999" blue="0.32887196540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="驗證成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEo-JM-Jri">
-                        <rect key="frame" x="133" y="61" width="60" height="22.5"/>
-                        <fontDescription key="fontDescription" name="NotoSansCJKtc-Medium" family="Noto Sans CJK TC" pointSize="15"/>
+                        <rect key="frame" x="113" y="45" width="48" height="18"/>
+                        <fontDescription key="fontDescription" name="NotoSansCJKtc-Medium" family="Noto Sans CJK TC" pointSize="12"/>
                         <color key="textColor" red="0.98017913099999998" green="0.80387479070000001" blue="0.0038468502460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="kS8-Dw-zvn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4MT-wB-3ev"/>
-                    <constraint firstItem="hTN-Hp-MkO" firstAttribute="leading" secondItem="kS8-Dw-zvn" secondAttribute="trailing" constant="10" id="5os-bU-xax"/>
-                    <constraint firstItem="kS8-Dw-zvn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="7Yh-14-R3C"/>
+                    <constraint firstItem="hTN-Hp-MkO" firstAttribute="leading" secondItem="kS8-Dw-zvn" secondAttribute="trailing" constant="13" id="5os-bU-xax"/>
+                    <constraint firstItem="kS8-Dw-zvn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="38" id="7Yh-14-R3C"/>
                     <constraint firstItem="beK-r5-9fU" firstAttribute="centerY" secondItem="kS8-Dw-zvn" secondAttribute="centerY" id="Cuw-tX-Yn9"/>
-                    <constraint firstItem="VEo-JM-Jri" firstAttribute="top" secondItem="hTN-Hp-MkO" secondAttribute="bottom" constant="6" id="GAE-vZ-RO7"/>
+                    <constraint firstItem="VEo-JM-Jri" firstAttribute="top" secondItem="hTN-Hp-MkO" secondAttribute="bottom" id="GAE-vZ-RO7"/>
                     <constraint firstItem="VEo-JM-Jri" firstAttribute="leading" secondItem="hTN-Hp-MkO" secondAttribute="leading" id="H25-cp-DyT"/>
-                    <constraint firstAttribute="trailing" secondItem="beK-r5-9fU" secondAttribute="trailing" constant="20" symbolic="YES" id="ZdL-d0-ivp"/>
-                    <constraint firstItem="hTN-Hp-MkO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="god-A8-N5V"/>
+                    <constraint firstAttribute="trailing" secondItem="beK-r5-9fU" secondAttribute="trailing" constant="27.5" id="ZdL-d0-ivp"/>
+                    <constraint firstAttribute="bottom" secondItem="kS8-Dw-zvn" secondAttribute="bottom" constant="12" id="chS-Si-QjE"/>
+                    <constraint firstItem="hTN-Hp-MkO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="god-A8-N5V"/>
+                    <constraint firstItem="kS8-Dw-zvn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="tEc-gd-FxX"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
