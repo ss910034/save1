@@ -62,7 +62,7 @@ class Tap1ViewController: BaseViewController, RMPScrollingMenuBarControllerDeleg
             item.title = "最新優惠"
         }
         else if index == 1 {
-            item.title = "首頁l"
+            item.title = "首頁"
         }
         else {
             item.title = "熱門排行"

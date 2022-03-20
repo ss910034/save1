@@ -37,6 +37,7 @@ class InputInvoiceViewController: BaseViewController {
 
 
     var year = 0
+    var yearAD = 0
     var month = 0
     var day = 0
     var period = ""
@@ -319,11 +320,11 @@ class InputInvoiceViewController: BaseViewController {
     }
     
     func checkField() {
-        if field1.text != "" && field2.text != "" && field3.text != "" && field1.text?.count == 2 && field2.text?.count == 8 && field3.text?.count == 4 {
+        if field1.text != "" && field2.text != "" && field3.text != "" && dateLab2.text != "請輸入消費日期" && field1.text?.count == 2 && field2.text?.count == 8 && field3.text?.count == 4 {
             self.saveBtn.isUserInteractionEnabled = true
             self.saveBtn.setBackgroundImage(UIImage(named: "m7"), for: .normal)
         }
-        else if field1.text != "" && field2.text != "" && dateLab2.text != "" && field1.text?.count == 2 && field2.text?.count == 8 {
+        else if field1.text != "" && field2.text != "" && dateLab2.text != "請輸入消費日期" && field1.text?.count == 2 && field2.text?.count == 8 {
             self.saveBtn.isUserInteractionEnabled = true
             self.saveBtn.setBackgroundImage(UIImage(named: "m7"), for: .normal)
         }
@@ -354,8 +355,9 @@ class InputInvoiceViewController: BaseViewController {
     }
     
     @IBAction func chooseDate(_ sender:UITapGestureRecognizer) {
-        let selection = BillDateSelectionVC.dateSelectionController(.THREEDATE, withYear: Int32(componets.year!), withMonth: Int32(month), endDay: Int32(day), hour: 11, minute: 30)
-        selection?.frankSelection3Block = {(vc, dateAry) in
+        yearAD = year + 1911
+        let selection = BillDateSelectionVC.dateSelectionController(.THREEDATE, withYear: Int32(yearAD), withMonth: Int32(month), endDay: Int32(day), hour: 11, minute: 30)
+        selection?.frankSelection3Block = { [self](vc, dateAry) in
             let y = dateAry![0] as! String
             let m = dateAry![1] as! String
             let d = dateAry![2] as! String
@@ -366,6 +368,11 @@ class InputInvoiceViewController: BaseViewController {
             self.dateLab2.text = rc
             self.dateLab2.textColor = .black
             self.checkField()
+            
+            let tmpy = y.replacingOccurrences(of: "年", with: "")
+            let tmpm = m.replacingOccurrences(of: "月", with: "")
+            let y_convert = Int(tmpy)! - 1911
+            self.dateLab.text = String(format: "%d年%@月", y_convert, self.dic[Int(tmpm)!]!)
         }
         selection?.cancelButtonAction = { vc in
             
