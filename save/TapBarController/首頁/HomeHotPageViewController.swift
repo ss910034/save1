@@ -29,11 +29,11 @@ class HomeHotPageViewController : BaseViewController, UITableViewDelegate, UITab
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 145.0
+        return 117.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return 11
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
