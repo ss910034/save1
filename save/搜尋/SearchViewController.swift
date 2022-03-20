@@ -17,7 +17,7 @@ class SearchViewController: SellDetailViewController {
     @IBOutlet var h : NSLayoutConstraint!
     var dataAry2:[String]=[]
     var ary:[String]? = Constants.getHistorySearchData() ?? []
-    var statusMode = 0
+    var statusMode = 0 //0:show more 1:all
     
     override func viewDidLoad() {
         // super.viewDidLoad()
@@ -118,18 +118,12 @@ class SearchViewController: SellDetailViewController {
                 h.constant = CGFloat((dataAry2.count + 1) * 40)
             }
             else {
-                h.constant = CGFloat(8 * 40)
+                h.constant = CGFloat(7 * 40)
             }
         }
         else {
-            if dataAry2.count <= 8  {
-                h.constant = CGFloat((dataAry2.count + 1) * 40)
-            }
-            else {
-                h.constant = CGFloat(10 * 40)
-            }
+            h.constant = CGFloat((dataAry2.count + 1) * 40)
         }
-        // myTableView2.scrollToRow(at: IndexPath(row: dataAry2.count, section: 0), at: .bottom, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -166,22 +160,20 @@ class SearchViewController: SellDetailViewController {
         }
         else {
             let cell = myTableView2.cellForRow(at: indexPath)
-            if indexPath.row == dataAry2.count {        // last record
-                if cell?.textLabel?.text == "清除歷史資料" {
-                    ary?.removeAll()
-                    dataAry2 = ary!
-                    myTableView2.reloadData()
-                    myTableView2.isHidden = true
-                    statusMode = 0
-                    Constants.clearHistorySearchData()
-                }
-                else {
-                    cell?.textLabel?.text = "清除歷史資料"
-                    statusMode = 1
-                    setSearchTableHeight()
-                }
+            if cell?.textLabel?.text == "清除歷史資料"{
+                ary?.removeAll()
+                dataAry2 = ary!
+                myTableView2.reloadData()
+                myTableView2.isHidden = true
+                statusMode = 0
+                Constants.clearHistorySearchData()
             }
-            else {
+            else if cell?.textLabel?.text == "顯示更多"{
+                myTableView2.reloadData()
+                statusMode = 1
+                setSearchTableHeight()
+            }
+            else{
                 let char = (cell?.textLabel?.text)!
                 let char1 = String(char.dropFirst().dropFirst().dropFirst())
                 self.dropDown.text = char1
@@ -219,21 +211,38 @@ class SearchViewController: SellDetailViewController {
             if cell == nil {
                 cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
             }
-            if indexPath.row == dataAry2.count {
-                if dataAry2.count >= 8 {
-                    cell?.textLabel?.text = "顯示更多"
+
+            if dataAry2.count > 6{
+                if indexPath.row < 6{
+                    cell?.textLabel?.text = "   " + dataAry2[indexPath.row]
+                    cell?.textLabel?.textAlignment = .left
                 }
-                else {
-                    cell?.textLabel?.text = "清除歷史資料"
+                else{
+                    if statusMode == 1{
+                        if indexPath.row == dataAry2.count{
+                            cell?.textLabel?.text = "清除歷史資料"
+                            cell?.textLabel?.textAlignment = .center
+                        }
+                        else{
+                            cell?.textLabel?.text = "   " + dataAry2[indexPath.row]
+                            cell?.textLabel?.textAlignment = .left
+                        }
+                    }
+                    else{
+                        cell?.textLabel?.text = "顯示更多"
+                        cell?.textLabel?.textAlignment = .center
+                    }
                 }
-                if statusMode == 1 {
-                    cell?.textLabel?.text = "清除歷史資料"
-                }
-                cell?.textLabel?.textAlignment = .center
             }
-            else {
-                cell?.textLabel?.textAlignment = .left
-                cell?.textLabel?.text = "   " + dataAry2[indexPath.row]
+            else{
+                if indexPath.row == dataAry2.count{
+                    cell?.textLabel?.text = "清除歷史資料"
+                    cell?.textLabel?.textAlignment = .center
+                }
+                else{
+                    cell?.textLabel?.text = "   " + dataAry2[indexPath.row]
+                    cell?.textLabel?.textAlignment = .left
+                }
             }
             cell?.textLabel?.textColor = .gray
             return cell!
@@ -254,10 +263,10 @@ class SearchViewController: SellDetailViewController {
     func updateDropMenu() {
         var f = false
         if let ary = ary {
-            for d in ary {
-                if d == dropDown.text {
+            if dropDown.text != ""{
+                let txt = dropDown.text!
+                if ary.contains(txt){
                     f = true
-                    break
                 }
             }
         }
